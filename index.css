@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(3, 79, 132, 0.15),
+    rgba(3, 79, 132, 0),
+    rgba(3, 79, 132, 0.75)
+  );
+}
+#headerImg {
+  margin: 7px;
+  padding: 2px;
+  height: 120px;
+  width: 500px;
+}
+#navDiv {
+  background-color: #034f84;
+  font-size: 12px;
+  font-weight: 500;
+}
+.navbar{
+    padding: 0 !important;
+}
