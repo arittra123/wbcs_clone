@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
 }
-body{
-  background-color:#F1F6F7;
-  font-family: 'Open Sans', sans-serif;
+body {
+  background-color: #f1f6f7;
+  font-family: "Open Sans", sans-serif;
 }
 html {
   box-sizing: border-box;
@@ -30,19 +30,76 @@ html {
   background-color: #034f84;
   font-size: 11px;
   font-weight: 500;
-  padding: 10px 0px 10px 40px;
+  padding: 10px 120px 10px 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
-.menu :first-child {
-  margin-left: 0;
+.menuItem{
+  margin-left: 32px;
+  cursor: pointer;
+}
+.menuItem:first-child{
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
 }
 .menu a {
   text-decoration: none;
   color: #ffffff;
-  margin-left: 30px;
+}
+.homeIcon{
+  color: #ffffff;
+  font-size: 8px;
+  margin-right: 2px;
+}
+.dropdownIcon{
+  color: #ffffff;
+  font-size: 8px;
+  margin-left: 3px;
+}
+.drpMenu1{
+  display: flex;
+  align-items: center;
+}
+.menuItem .drpMenu1:hover + .drpItem{
+  display: block;
+}
+.drpItem:hover{
+  display: block;
+}
+.drpItem{
+  display: none;
+  position:absolute;
+  z-index: 1;
+}
+.drpItem ul li{
+  
+}
+.drpItem ul li a:hover{
+  background-color: #ffffff;
+  color: rgb(33, 33, 33);
+}
+.drpItem ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 4px 6px 4px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.drpDn{
+  list-style-type:none;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  padding: 2px 22px 2px 0px;
+  width: max-content;
+  background-color: #034f84;
 }
 .ltNews {
   border: 1px solid #17a2b8;
-  width: 1230px;
+  width: 95%;
   margin: 10px auto 0 auto;
   padding: 0px;
   display: flex;
@@ -59,42 +116,92 @@ html {
   right: 0.5px;
   margin-bottom: 0.2px;
 }
-.ltScrollText{
+.ltScrollText {
   width: 1000px;
   margin: auto;
   color: crimson;
   font-size: 11px;
   font-weight: 500;
 }
-.body{
+.body {
   /* border: 1px solid #17a2b8; */
   padding: 15px;
   display: flex;
   justify-content: space-evenly;
   margin-top: 5px;
 }
-.whatsNew{
+.whatsNew {
   width: 23%;
   border: 1px solid #17a2b8;
-  height: 430px;
+  height: 410px;
+  border-radius: 4px;
 }
-.someText{
+.someText {
   width: 48%;
   border: 1px solid #17a2b8;
   /* background-image: url("./forgot_enrollment.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center; */
+  height: 410px;
 }
-.candidateCorner{
+.candidateCorner {
   width: 23%;
   border: 1px solid #17a2b8;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to right,
+    rgba(3, 79, 232, 0),
+    rgba(3, 79, 132, 0),
+    rgba(3, 79, 132, 0.75)
+  );
+  height: 410px;
 }
-#someTextImg{
+#someTextImg {
   width: 100%;
   height: 100%;
 }
-.footer{
+.candidateCornerHd {
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #17a2b8;
+  /* padding: 6px 0px 6px 10px; */
+  height: 8%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.bdCon {
+  width: 90%;
+  border: 2px solid #034f84;
+  font-size: 12px;
+  font-weight: 500;
+  height: auto;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 10px;
+  color: rgb(91, 91, 91);
+}
+.candidateCornerbd {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 92%;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+}
+.op {
+  padding: 8px;
+  border-bottom: 1px solid gainsboro;
+  cursor: pointer;
+}
+.op:hover {
+  background-color: #034f84;
+  color: #ffffff;
+}
+.op:last-child {
+  border-bottom: none;
+}
+.footer {
   width: 100%;
   background-color: #034f84;
   padding: 12px 14px 12px 14px;
@@ -105,10 +212,72 @@ html {
   justify-content: space-between;
   margin-top: 15px;
 }
-.footer a{
+.footer a {
   text-decoration: none;
   color: #17a2b8;
 }
-.footer a:hover{
+.footer a:hover {
   text-decoration: underline;
+}
+.whatsNewhd {
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid gainsboro;
+  /* padding: 6px 0px 6px 10px; */
+  height: 8%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-image: linear-gradient(to right, rgba(3, 79, 232, 0), rgba(3, 79, 132, 0), rgba(3, 79, 132, 0.75));
+  border-top-right-radius: 4px;
+  margin-top: 0.5px;
+}
+.whatsNewbd{
+  height: 84%;
+  padding: 10px 12px 10px 0px;
+  /* border: 1px solid #034f84; */
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(32, 32, 32);
+  /* text-align: justify; */
+}
+.whatsNewbd ul li{
+  padding:5px 5px;
+  cursor: pointer;
+}
+.whatsNewft{
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 1px solid gainsboro;
+  /* padding: 6px 0px 6px 10px; */
+  height: 8%;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(3, 79, 232, 0), rgba(3, 79, 132, 0), rgba(3, 79, 132, 0.75));
+  border-bottom-right-radius: 4px;
+  position: relative;
+  bottom: 0.5px;
+}
+.whatsNewft a{
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.whatsNewft a:hover{
+  text-decoration: underline;
+}
+.menuToggle{
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: -85px;
+  display: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .menuToggle{
+    display: block;
+  }
+ 
 }
